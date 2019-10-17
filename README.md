@@ -35,7 +35,7 @@ func numJewelsInStones(J string, S string) int {
 ```
 * Runtime: 0 ms, faster than 100.00%
 * Memory Usage:  2 MB, less than 100.00%
-14. Longest Common Prefix
+### 14. Longest Common Prefix
 
 
 ```
