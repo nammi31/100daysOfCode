@@ -35,4 +35,39 @@ func numJewelsInStones(J string, S string) int {
 ```
 * Runtime: 0 ms, faster than 100.00%
 * Memory Usage:  2 MB, less than 100.00%
+14. Longest Common Prefix
+
+
+```
+func min(x int,y int)int{
+	if x<y {
+		return x
+	}
+	return y
+}
+func longestCommonPrefix(strs []string) string {
+	if len(strs)==0{
+	  return ""
+	}
+	if len(strs) ==1{
+		return strs[0]
+	}
+	ans := strs[0]        
+	for j:=1; j<len(strs);j++{
+		if len(strs[j]) < len(ans){       //choose a string of minimum length as ans
+			ans = strs[j]
+		}
+	}        
+	for i:=0; i<len(ans);i++{                 //	assume all chars of ans match
+		for j:=0; j<len(strs);j++{
+			if ans[i] !=  strs[j][i]{
+				return ans[0:i]   //if anyone does not match then we no need to explore more
+			}
+		}
+	}
+	return ans                                //if nothing is returned yet then all char match
+}
+```
+* Runtime: 0 ms, faster than 100.00% 
+* Memory Usage:  2.4 MB, less than 100.00%
 
