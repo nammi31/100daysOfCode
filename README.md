@@ -20,17 +20,17 @@ func defangIPaddr(address string) string {
 
 ```
 func numJewelsInStones(J string, S string) int {
-    var inJewel [128]bool
+        var inJewel [128]bool
 	for i:=0; i<len(J); i++{
-        inJewel [ J[i]-65 ] = true
+	     inJewel [ J[i]-65 ] = true
 	}
 	ans:=0
 	for i:=0; i<len(S);i++{
 		if inJewel [S[i]-65] == true{
-			ans++
-		}
+			ans++ 
+	        }
 	}
-    return ans
+	return ans
 }
 ```
 * Runtime: 0 ms, faster than 100.00%
