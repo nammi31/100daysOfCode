@@ -70,4 +70,16 @@ func longestCommonPrefix(strs []string) string {
 ```
 * Runtime: 0 ms, faster than 100.00% 
 * Memory Usage:  2.4 MB, less than 100.00%
+## Day2
+### 136. single number
+```
+func singleNumber(nums []int) int { 
+    for i:=1; i<len(nums); i++{
+		nums[i] = nums[i]^nums[i-1]
+	}
+	return nums[len(nums)-1]
+}
+```
+* Runtime: 8 ms, faster than 95.40% O(N)
+* Memory Usage:  4.7 MB, less than 100.00% O(1)
 
