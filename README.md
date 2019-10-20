@@ -54,30 +54,30 @@ func longestCommonPrefix(strs []string) string {
 	}
 	ans := strs[0]        
 	for j:=1; j<len(strs);j++{
-		if len(strs[j]) < len(ans){       //choose a string of minimum length as ans
+		if len(strs[j]) < len(ans){       // choose a string of minimum length as ans
 			ans = strs[j]
 		}
 	}        
-	for i:=0; i<len(ans);i++{                 //	assume all chars of ans match
+	for i:=0; i<len(ans);i++{                 // assume all chars of ans match
 		for j:=0; j<len(strs);j++{
 			if ans[i] !=  strs[j][i]{
-				return ans[0:i]   //if anyone does not match then we no need to explore more
+				return ans[0:i]   // if anyone does not match then we no need to explore more
 			}
 		}
 	}
-	return ans                                //if nothing is returned yet then all char match
+	return ans                                // if nothing is returned yet then all chars has matched
 }
 ```
 * Runtime: 0 ms, faster than 100.00% 
 * Memory Usage:  2.4 MB, less than 100.00%
 ## Day2
 ### 136. single number
-```
+```ha
 func singleNumber(nums []int) int { 
     for i:=1; i<len(nums); i++{
-		nums[i] = nums[i]^nums[i-1]
+		nums[i] = nums[i]^nums[i-1]     // current num update with xor of all previous num in array
 	}
-    return nums[len(nums)-1]
+    return nums[len(nums)-1]                    // so last one is our final result
 }
 ```
 * Runtime: 8 ms, faster than 95.40% O(N)
