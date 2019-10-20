@@ -77,7 +77,7 @@ func singleNumber(nums []int) int {
     for i:=1; i<len(nums); i++{
 		nums[i] = nums[i]^nums[i-1]
 	}
-	return nums[len(nums)-1]
+    return nums[len(nums)-1]
 }
 ```
 * Runtime: 8 ms, faster than 95.40% O(N)
