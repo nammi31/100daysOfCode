@@ -1,6 +1,49 @@
 # 100DaysOfCoding
 
 Today is october 17 and I am going to start my 100DaysOfCoding Challenge.
+## Day3 31 oct, 2019
+### 1221. Split a String in Balanced Strings
+```
+func balancedStringSplit(s string) int {
+    cnt := 0
+    ans := 0
+    for i:=0; i<len(s);i++{
+        if s[i] == 'R'{
+            cnt++
+        }else{
+            cnt--
+        }
+        if cnt == 0{
+            ans++
+        }
+    }
+    return ans
+}
+```
+* Runtime:  0 ms, faster than 100.00% O(N)
+* Memory Usage: 2 MB, less than 100.00% O(1)
+### 657. Robot Return to Origin
+```
+func judgeCircle(moves string) bool {   
+    x :=0
+    y :=0
+    for i:=0; i<len(moves);i++{
+        if moves[i] == 'U'{
+            y++
+        }else if moves[i] == 'D'{
+            y--
+        }else if moves[i] == 'R'{
+            x++
+        }else if moves[i] == 'L'{
+            x--
+        }
+    }
+    return x == 0 && y == 0
+    
+}
+```
+* Runtime:  4 ms, faster than 85.90% O(N)
+* Memory Usage:3.5 MB, less than 100.00% O(1)
 
 
 ## Day1
@@ -83,25 +126,4 @@ func singleNumber(nums []int) int {
 * Runtime: 8 ms, faster than 95.40% O(N)
 * Memory Usage:  4.7 MB, less than 100.00% O(1)
 
-## Day3 31 oct, 2019
-### 1221. Split a String in Balanced Strings
-```
-func balancedStringSplit(s string) int {
-    cnt := 0
-    ans := 0
-    for i:=0; i<len(s);i++{
-        if s[i] == 'R'{
-            cnt++
-        }else{
-            cnt--
-        }
-        if cnt == 0{
-            ans++
-        }
-    }
-    return ans
-}
-```
-* Runtime:  0 ms, faster than 100.00% O(N)
-* Memory Usage: 2 MB, less than 100.00% O(1)
 
