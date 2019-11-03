@@ -1,6 +1,22 @@
 # 100DaysOfCoding
 
 Today is october 17 and I am going to start my 100DaysOfCoding Challenge.
+## Day4 3 november, 2019
+### 832. Flipping an Image
+```
+func flipAndInvertImage(A [][]int) [][]int {
+  
+   for i:=0;i<len(A);i++{
+		l:=len(A[i])
+		for j:=0;j<(l+1)/2;j++{
+			A[i][j],A[i][l-j-1]=A[i][l-j-1]^1,A[i][j]^1
+		}
+	}
+	return A
+}
+```
+* Runtime:  4 ms, faster than 93.91% O(N*M/2)
+* Memory Usage: : 3.7 MB, less than 100.00% O(1)
 ## Day3 31 oct, 2019
 ### 1221. Split a String in Balanced Strings
 ```
